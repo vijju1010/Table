@@ -1,0 +1,32 @@
+html
+    head
+    body
+    table(border=2)
+        thead
+            th="id"
+            th="name"
+            th="dob"
+            th="loves"
+            th="weigt"
+            th="gender"
+            th="vampires"
+        tbody 
+             each val,i in unicorns
+                  tr
+                    td=val._id
+                    td=val.name
+                    td=val.dob
+                    td=val.loves
+                    td=val.weight 
+                    td=val.gender
+                    td=val.vampires
+                    td
+                        button
+                              a(href="http://localhost:3400/deleteitem/"+val._id) Delete
+                    td 
+                        button
+                              a(href="http://localhost:3400/updatedoc/"+val._id) UpdatetDoc
+    br
+    br
+    button
+        a(href="http://localhost:3400/insertdoc") InsertDoc         
